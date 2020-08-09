@@ -5,7 +5,7 @@ from .models import Listing
 from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 # Create your views here.
 def index(request):
-  listings = Listing.objects.all()
+  listings = Listing.objects.order_by('-list_date')
 
   paginator = Paginator(listings, 6)
 
