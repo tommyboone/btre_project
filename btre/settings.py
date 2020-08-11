@@ -155,3 +155,8 @@ MESSAGE_TAGS = {
 # EMAIL_HOST_USER = env('EMAIL')
 # EMAIL_HOST_PASSWORD = env('PASSWORD')
 # EMAIL_USE_TLS = True
+
+try:
+    from .local_settings import *
+except ImportError:
+    pass
